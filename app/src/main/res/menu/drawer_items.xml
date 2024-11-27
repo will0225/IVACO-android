@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Main menu items group -->
+    <group android:id="@+id/main_group">
+        <item
+            android:id="@+id/navProfile"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/navDashboard"
+            android:icon="@drawable/baseline_dashboard_24"
+            android:title="Dashboard"/>
+        <item
+            android:id="@+id/navTeleMed"
+            android:icon="@drawable/baseline_medical_information_24"
+            android:title="TeleMed"/>
+        <item
+            android:id="@+id/navDevice"
+            android:icon="@drawable/baseline_speaker_phone_24"
+            android:title="Device"/>
+        <item
+            android:id="@+id/navMedication"
+            android:icon="@drawable/baseline_medication_24"
+            android:title="Medication"/>
+        <item
+            android:id="@+id/navHistory"
+            android:icon="@drawable/baseline_history_24"
+            android:title="History"/>
+        <item
+            android:id="@+id/navReports"
+            android:icon="@drawable/baseline_fact_check_24"
+            android:title="Reports"/>
+    </group>
+
+    <!-- Logout menu item group -->
+    <group android:id="@+id/logout_group" android:checkableBehavior="none">
+        <item
+            android:id="@+id/navLogout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout"
+            android:orderInCategory="100"/>
+    </group>
+
+</menu>

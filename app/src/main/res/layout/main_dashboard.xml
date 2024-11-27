@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4FAF9">
+
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar_layout" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Welcome!"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Option Selector Layout with Arrows -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Left Arrow (Previous Option) -->
+        <ImageView
+            android:id="@+id/iv_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:contentDescription="Previous option"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- PieChart -->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:padding="0dp"
+            />
+
+        <!-- Right Arrow (Next Option) -->
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+            android:contentDescription="Next option"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <!-- Option Label -->
+    <TextView
+        android:id="@+id/tv_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <!-- Grid Layout for Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowOrderPreserved="false">
+
+        <!-- Button: Measurement -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_measurement"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/measurement"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Measurement"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button: Messages -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_messages"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/email"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button: TeleMed -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_telemed"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/telemed"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TeleMed"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button: Education -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_education"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/education"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Education"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button: Chat -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_chat"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1.5"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/chat"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button: Notifications -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_notifications"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1.5"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#259CFA"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/notification"
+                    android:background="@drawable/circular_background"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</LinearLayout>

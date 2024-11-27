@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" /> <!-- Permissions declared again -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:maxSdkVersion="30" /> <!-- This limits the permission to Android 11 and below -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Optional permissions -->
+    <!-- For devices running Android 12 (API level 32) or higher and integrating Agora Video SDK version v4.1.0 or lower, you also need to add the following permissions -->
+    <!-- For Android 12.0 or higher, the following permissions are also required -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@color/white"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.measurements.Measurement_RespiratoryRateList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_O2List_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_TempList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_BloodPressureList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_BloodGlucoseList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_BloodGluscoseList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard_2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoCall_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterMeeting_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".JoinMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ECGPatchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Device_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.PasswordResetOTP"
+            android:exported="false" />
+        <activity
+            android:name=".MedicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.ECG_AutoReading_Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+
+            <!-- Other attributes like intent filters, etc. -->
+        </activity>
+        <activity
+            android:name=".ui.history_readings.Medication_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history_readings.PresentComplain_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history_readings.SurgicalProcedure_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history_readings.FamilyHistory_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Sur_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".History_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Message_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.telemed.AddAppointment_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".TeleMedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducationDashboard_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.RespiratoryRate_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_RespiratoryRate_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.O2_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".O2_Activity2"
+            android:exported="false" />
+        <activity
+            android:name=".ECG_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_O2_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_ECG_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.Temp_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_Temp_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.BloodPressure_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_BloodPressure_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurement_reading.BloodGlucose_Reading_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.measurements.Measurement_BloodGlucose_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MeasurementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.TermsConditions"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.TechnicalSupport"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.PasswordReset"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.PrivacyPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lavender">#8692f7</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="grey">#d2d2d2</color>
+
+
+    <!-- ecg graphics -->
+    <color name="colorPrimary">#1798e8</color>
+    <color name="colorPrimaryDark">#1574c0</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_grid_line">#eaa1be</color>
+    <color name="color_grid_transparent">#00eaa1be</color>
+    <color name="halfTransparent">#88FFFFFF</color>
+
+    <color name="settingDeviderGrey">#979797</color>
+
+    <color name="empty_directory_hint">#c7c7c7</color>
+
+    <color name="compatibility_pressed_color">#1a000000</color>
+    <color name="compatibility_focus_color">#48000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

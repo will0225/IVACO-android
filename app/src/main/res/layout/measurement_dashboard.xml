@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4FAF9">
+
+    <!-- Toolbar -->
+    <include layout="@layout/toolbar_layout"/>
+
+    <!-- Title for Measurements -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measurements"
+        android:textSize="24sp"
+        android:textColor="#259CFA"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- GridLayout for CardViews -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:columnCount="2"
+        android:padding="20dp"
+        android:rowCount="3">
+
+        <!-- CardView 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_blood_glucose"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/sugar_blood" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#259CFA"
+                    android:textStyle="bold"
+                    android:text="Blood Glucose"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_blood_pressure"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/blood_pressure" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#259CFA"
+                    android:textStyle="bold"
+                    android:text="Blood Pressure"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 3 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ecg"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ecg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#259CFA"
+                    android:textStyle="bold"
+                    android:text="ECG"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 4 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_temperature"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/temp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#259CFA"
+                    android:text="Temperature"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 5 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_o2"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/o2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#259CFA"
+                    android:textStyle="bold"
+                    android:text="O2"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView 6 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_respiratory_rate"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/lungs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColor="#259CFA"
+                    android:textStyle="bold"
+                    android:text="Respiratory Rate"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</LinearLayout>

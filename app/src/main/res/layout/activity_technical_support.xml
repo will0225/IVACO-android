@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.TechnicalSupport"
+    android:background="@drawable/login_bg">
+
+    <!-- CardView at the bottom -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Title for Technical Support -->
+
+            <!-- Vertical list of Checkboxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_forgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Forgot Password"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_SignErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Everything is fine but not signing in"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_findingErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="I cannot find anything"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_showingErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Showing Errors"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Others"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewEnd"
+                    android:drawableStart="@drawable/baseline_wifi_calling_24"
+                    android:layout_marginStart="200dp"
+                    android:text="+ 1 11 2256 987"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Input Box -->
+                <EditText
+                    android:id="@+id/et_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:hint="Enter your input"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <!-- Buttons: Submit and Cancel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#259CFA"
+                    android:text="Submit"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#259CFA"
+                    android:text="Cancel"
+                    android:textColor="#fff" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This product is licensed from Aman Ventures Platform, AV (a US corporation)© 2023 as Mobility health Platform, MH | All rights reserved."
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tv_terms_conditions"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:onClick="navigateToTermsConditions"
+                    android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                    android:backgroundTint="#259CFA"
+                    android:text="Terms And Conditions"
+                    android:textColor="#FFFFFF" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tv_privacy_policy"
+                    android:layout_width="25dp"
+                    android:layout_height="45dp"
+                    android:onClick="navigateToPrivacyPolicy"
+                    android:layout_weight="1"
+                    android:backgroundTint="#259CFA"
+                    android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                    android:textSize="10dp"
+                    android:text="Privacy Policy"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="9dp"
+        android:text="Technical Support"
+        android:textAlignment="center"
+        android:textColor="#259CFA"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+</RelativeLayout>

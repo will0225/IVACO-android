@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.PrivacyPolicy"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="77dp"
+            android:text="Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="#0F336F"
+            android:textFontWeight="700"
+            android:textSize="32sp"
+            android:drawableLeft="@drawable/ic_back"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor Hunt Apps Privacy Policy"
+            android:textColor="#0F336F"
+            android:textFontWeight="700"
+            android:textSize="15dp"
+            android:textAllCaps="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/list_mark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:text="Please read the following terms of service agreement carefully. By accessing or using our sites and our services, you hereby agree to be  bound by the terms and all terms incorporated herein by reference. It is the responsibility of you, the user, customer, or prospective customer to read the terms and conditions before proceeding to use this site. If you do not expressly agree to all of the terms and conditions, then please do not access or use our sites or our services. This terms of service agreement is effective as of 08/15/2017." />
+
+    </RelativeLayout>
+</RelativeLayout>

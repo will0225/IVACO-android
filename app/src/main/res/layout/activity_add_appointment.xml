@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/readingbg"
+    tools:context=".ui.telemed.AddAppointment_Activity">
+
+    <!-- Title for Book Appointment -->
+    <TextView
+        android:id="@+id/tv_book_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- CardView for Invite Participants -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_invite_participants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_appointment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Search View for user search -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search users" />
+            <!-- CardView to show search results when SearchView is tapped -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchResultBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="4dp"
+                android:visibility="gone"> <!-- Hidden by default -->
+
+                <!-- RecyclerView for showing the filtered users -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resultsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Invite Button -->
+            <Button
+                android:id="@+id/btn_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Invite"
+                android:contentDescription="Invite participant button" />
+
+            </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Appointment Title -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_appointment_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/card_invite_participants"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_appointment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Enter Appointment Title"
+                android:contentDescription="Appointment title input field" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Appointment Description -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_appointment_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/card_appointment_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Description"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_appointment_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Enter Appointment Description"
+                android:contentDescription="Appointment description input field" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Appointment Type and Appointment About -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_appointment_type_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/card_appointment_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- Appointment Type Spinner -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment Type"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_appointment_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/appointment_type_options"
+                    android:contentDescription="Appointment Type dropdown" />
+            </LinearLayout>
+
+            <!-- Appointment About Spinner -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment About"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_appointment_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/appointment_about_options"
+                    android:contentDescription="Appointment About dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for DatePicker (Appointment Date) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_appointment_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/card_appointment_type_about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Date"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_appointment_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select appointment date"
+                android:textSize="16sp"
+                android:padding="8dp"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons for Submit and Cancel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/card_appointment_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Submit"
+            android:contentDescription="Submit appointment button" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Cancel"
+            android:contentDescription="Cancel appointment button" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

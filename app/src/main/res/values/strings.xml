@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Avica App</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="tv_revert">Revert</string>
+    <string name="tv_de_revert">De-Revert</string>
+    <string name="tv_switch_gain">SwitchGain</string>
+    <string name="tv_denoising_open">Open Denoising</string>
+    <string name="tv_denoising_close">Close Denoising</string>
+    <!--Action Bar menu items-->
+    <string name="action_switch_graphics">SwitchView</string>
+    <string name="activity_graphic">Data Graphic</string>
+    <string name="activity_history">Data History</string>
+
+    <!-- Array for Blood Glucose Units -->
+    <string-array name="glucose_units">
+        <item>MGDL</item>
+    </string-array>
+
+    <!-- Array for Blood Pressure Units -->
+    <string-array name="bloodpressure_units">
+        <item>MMHG</item>
+    </string-array>
+
+    <!-- Array for Temperature Units -->
+    <string-array name="temp_units">
+        <item>FAHRENHEIT</item>
+    </string-array>
+
+    <!-- Array for SPO2 Units -->
+    <string-array name="spo2_units">
+        <item>PERCENTAGE</item>
+    </string-array>
+
+    <string-array name="appointment_type_options">
+        <item>ONLINE</item>
+        <item>OFFLINE</item>
+    </string-array>
+
+    <string-array name="appointment_about_options">
+        <item>EMERGENCY</item>
+        <item>CASUAL</item>
+        <item>CHECKUP</item>
+        <item>CONSULTANCY</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:padding="0dp"
+    android:background="@android:color/transparent"
+    android:gravity="top">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="#259CFA">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                android:layout_gravity="start" />
+
+            <ImageButton
+                android:id="@+id/buttonDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/baseline_menu_24"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp" />
+
+            <!-- Diagonal logo box -->
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:rotation="-45"
+            android:background="#F4FAF9"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo"
+                android:rotation="45"
+            android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</androidx.cardview.widget.CardView>
+    </LinearLayout>

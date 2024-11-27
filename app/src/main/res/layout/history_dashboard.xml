@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg2">
+
+    <!-- Toolbar -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/top_left_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <!-- History heading -->
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- First Row of 2 Appointment Boxes -->
+    <LinearLayout
+        android:id="@+id/history_boxes_row_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_left_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread">
+
+        <!-- Present Complain Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_present_complain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/present_complain_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/complain" />
+
+                <TextView
+                    android:id="@+id/total_appointments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Present Complain"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Family History Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_family_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/family_history_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/familyhistory" />
+
+                <TextView
+                    android:id="@+id/family_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Family History"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- Second Row of 2 Appointment Boxes -->
+    <LinearLayout
+        android:id="@+id/history_boxes_row_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/history_boxes_row_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread">
+
+        <!-- surgical procedures Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_surgical_procedure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/surgical_procedures_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/surgicalprocedures" />
+
+                <TextView
+                    android:id="@+id/surgical_procedures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Surgical Procedures"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Medication Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_medication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+                <ImageView
+                    android:id="@+id/medication_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/medication" />
+                <TextView
+                    android:id="@+id/medication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medication"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Table for History Details -->
+    <TableLayout
+        android:id="@+id/history_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@id/history_boxes_row_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Header Row with Background -->
+        <TableRow
+            android:background="#0070FA">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="EMR"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Scheduled Date"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Status"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+
+        </TableRow>
+
+        <!-- Placeholder Row -->
+        <TableRow
+            android:id="@+id/placeholder_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/white"
+                android:text="No data available"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/white"
+            android:text="-"
+            android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/white"
+            android:text="-"
+            android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:background="@android:color/white"
+            android:text="-"
+            android:gravity="center" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
