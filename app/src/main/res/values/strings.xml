@@ -26,7 +26,13 @@
     <string name="action_switch_graphics">SwitchView</string>
     <string name="activity_graphic">Data Graphic</string>
     <string name="activity_history">Data History</string>
-
+    <string name="bottom_home_group">Bottom Home Group</string>
+    <string name="notifications">Notifications</string>
+    <string name="chat">Chat</string>
+    <string name="education">Education</string>
+    <string name="telemed">TeleMed</string>
+    <string name="messages">Messages</string>
+    <string name="measurement">Measurement</string>
     <!-- Array for Blood Glucose Units -->
     <string-array name="glucose_units">
         <item>MGDL</item>
@@ -58,5 +64,6 @@
         <item>CHECKUP</item>
         <item>CONSULTANCY</item>
     </string-array>
+
 
 </resources>

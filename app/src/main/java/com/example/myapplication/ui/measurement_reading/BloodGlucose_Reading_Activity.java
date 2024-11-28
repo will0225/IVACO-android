@@ -57,7 +57,7 @@ public class BloodGlucose_Reading_Activity extends AppCompatActivity {
         // Initialize UI components
         etBloodGlucose = findViewById(R.id.et_bloodglucose);
         etTitle = findViewById(R.id.et_title);
-        unitSpinner = findViewById(R.id.spinner_unit); // Assuming you have a dropdown for selecting unit
+//        unitSpinner = findViewById(R.id.spinner_unit); // Assuming you have a dropdown for selecting unit
         btnCancel = findViewById(R.id.btn_cancel);
         btnSubmit = findViewById(R.id.btn_submit);
 
@@ -77,7 +77,7 @@ public class BloodGlucose_Reading_Activity extends AppCompatActivity {
         btnSubmit.setOnClickListener(v -> {
             String value = etBloodGlucose.getText().toString();
             String title = etTitle.getText().toString();
-            String unit = unitSpinner.getSelectedItem().toString(); // Assuming spinner holds unit selection
+//            String unit = unitSpinner.getSelectedItem().toString(); // Assuming spinner holds unit selection
 
             // Check if fields are empty
             if (value.isEmpty() || title.isEmpty()) {
@@ -87,7 +87,7 @@ public class BloodGlucose_Reading_Activity extends AppCompatActivity {
             // Convert blood glucose value to double
             double bloodGlucose = Double.parseDouble(value);
             // Submit the measurement to the API
-            sendMeasurement( title, bloodGlucose, unit, readingSource, measurementType, measurementId);
+            sendMeasurement( title, bloodGlucose, "unit", readingSource, measurementType, measurementId);
         });
     }
 

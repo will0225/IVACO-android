@@ -53,8 +53,8 @@ public class ChatDetailActivity extends AppCompatActivity {
         sendButton = findViewById(R.id.sendButton);
         messagesScrollView = findViewById(R.id.messagesScrollView);
         attachmentButton = findViewById(R.id.attachmentButton);
-        ImageView userImageView = findViewById(R.id.userImageView);
-        TextView usernameTextView = findViewById(R.id.usernameTextView);
+//        ImageView userImageView = findViewById(R.id.userImageView);
+//        TextView usernameTextView = findViewById(R.id.usernameTextView);
 
         // Get user data from intent
         Intent intent = getIntent();

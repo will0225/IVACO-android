@@ -191,7 +191,7 @@ public class LoginScreen extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     LoginResponse loginResponse = response.body();
                     String token = loginResponse.getToken(); // Adjust based on your response model
-                    //setToken(loginResponse.getToken()); // Save the token here
+//                    setToken(loginResponse.getToken()); // Save the token here
                     saveUserDetails(loginResponse); // Save all user details
                     if (rememberMeCheckBox.isChecked()) {
                         saveLoginCredentials(username, password);

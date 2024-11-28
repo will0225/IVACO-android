@@ -53,97 +53,97 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
 
         // Initialize views
-        tvOption = findViewById(R.id.tv_option);
+//        tvOption = findViewById(R.id.tv_option);
 //        statusCircle = findViewById(R.id.status_circle);
-        tvWelcome = findViewById(R.id.tv_welcome);  // Ensure this ID matches your layout
-        ImageView ivPrevious = findViewById(R.id.iv_previous);
-        ImageView ivNext = findViewById(R.id.iv_next);
-        welcomeMessage = findViewById(R.id.tv_welcome);
-        firstNameTextView = findViewById(R.id.first_name);
-        headerName = findViewById(R.id.user_name);
+//        tvWelcome = findViewById(R.id.tv_welcome);  // Ensure this ID matches your layout
+//        ImageView ivPrevious = findViewById(R.id.iv_previous);
+//        ImageView ivNext = findViewById(R.id.iv_next);
+//        welcomeMessage = findViewById(R.id.tv_welcome);
+//        firstNameTextView = findViewById(R.id.first_name);
+//        headerName = findViewById(R.id.user_name);
 
-        Uri = findViewById(R.id.profile_image);
+//        Uri = findViewById(R.id.profile_image);
 
         // Set initial option and status
-        updateOptionAndStatus();
+//        updateOptionAndStatus();
 
         // Show the username in the welcome message
-        displayUsername();
+//        displayUsername();
 
         // Handle previous arrow click
-        ivPrevious.setOnClickListener(v -> {
-            stopAutoSwitch();
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = options.length - 1; // Wrap around to the last option
-            }
-            updateOptionAndStatus();
-            startAutoSwitch();
-        });
-
-        // Handle next arrow click
-        ivNext.setOnClickListener(v -> {
-            stopAutoSwitch();
-            if (currentIndex < options.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Wrap around to the first option
-            }
-            updateOptionAndStatus();
-            startAutoSwitch();
-        });
+//        ivPrevious.setOnClickListener(v -> {
+//            stopAutoSwitch();
+//            if (currentIndex > 0) {
+//                currentIndex--;
+//            } else {
+//                currentIndex = options.length - 1; // Wrap around to the last option
+//            }
+//            updateOptionAndStatus();
+//            startAutoSwitch();
+//        });
+//
+//        // Handle next arrow click
+//        ivNext.setOnClickListener(v -> {
+//            stopAutoSwitch();
+//            if (currentIndex < options.length - 1) {
+//                currentIndex++;
+//            } else {
+//                currentIndex = 0; // Wrap around to the first option
+//            }
+//            updateOptionAndStatus();
+//            startAutoSwitch();
+//        });
 
         // Find buttons
-        ImageButton buttonBack = findViewById(R.id.buttonBack);
+//        ImageButton buttonBack = findViewById(R.id.buttonBack);
 
         // Set click listener for the back button
-        buttonBack.setOnClickListener(v -> onBackPressed());
+//        buttonBack.setOnClickListener(v -> onBackPressed());
 
         // Drawer and navigation setup
-        main = findViewById(R.id.main);
-        buttonDrawer = findViewById(R.id.buttonDrawer);
-        navigationView = findViewById(R.id.navigationView);
-        buttonDrawer.setOnClickListener(view -> main.openDrawer(GravityCompat.START));
-        navigationView.setNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.navProfile) {
-                Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.navReports) {
-                Toast.makeText(MainActivity.this, "Reports Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, ReportActivity.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.navTeleMed) {
-                Toast.makeText(MainActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, TeleMedActivity.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.navHistory) {
-                Toast.makeText(MainActivity.this, "History Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, History_Activity.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.navMedication) {
-                Toast.makeText(MainActivity.this, "Medication Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MedicationActivity.class);
-                startActivity(intent);
-            } else if (item.getItemId() == R.id.navDevice) {
-                Toast.makeText(MainActivity.this, "Device Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Device_Activity.class);startActivity(intent);
-            } else if (item.getItemId() == R.id.navLogout) {
-                // Handle logout logic here
-                Toast.makeText(MainActivity.this, "Logging Out", Toast.LENGTH_SHORT).show();
-                logout();
-            }
-            main.closeDrawer(GravityCompat.START);
-            return true;
-        });
+//        main = findViewById(R.id.main);
+//        buttonDrawer = findViewById(R.id.buttonDrawer);
+//        navigationView = findViewById(R.id.navigationView);
+//        buttonDrawer.setOnClickListener(view -> main.openDrawer(GravityCompat.START));
+//        navigationView.setNavigationItemSelectedListener(item -> {
+//            if (item.getItemId() == R.id.navProfile) {
+//                Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.navReports) {
+//                Toast.makeText(MainActivity.this, "Reports Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, ReportActivity.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.navTeleMed) {
+//                Toast.makeText(MainActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, TeleMedActivity.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.navHistory) {
+//                Toast.makeText(MainActivity.this, "History Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, History_Activity.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.navMedication) {
+//                Toast.makeText(MainActivity.this, "Medication Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, MedicationActivity.class);
+//                startActivity(intent);
+//            } else if (item.getItemId() == R.id.navDevice) {
+//                Toast.makeText(MainActivity.this, "Device Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MainActivity.this, Device_Activity.class);startActivity(intent);
+//            } else if (item.getItemId() == R.id.navLogout) {
+//                // Handle logout logic here
+//                Toast.makeText(MainActivity.this, "Logging Out", Toast.LENGTH_SHORT).show();
+//                logout();
+//            }
+//            main.closeDrawer(GravityCompat.START);
+//            return true;
+//        });
 
         // Initialize buttons from GridLayout
         CardView btnMeasurement = findViewById(R.id.btn_measurement);
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 currentIndex = (currentIndex + 1) % options.length; // Loop around the options
-                updateOptionAndStatus();
+//                updateOptionAndStatus();
                 autoSwitchHandler.postDelayed(this, SWITCH_DELAY); // Schedule the next switch
             }
         };
@@ -195,24 +195,25 @@ public class MainActivity extends AppCompatActivity {
     private void displayUsername() {
         SharedPreferences sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
         String username = sharedPreferences.getString("username", "Guest");
-        tvWelcome.setText("Welcome, " + firstNameTextView + "!");
+//        tvWelcome.setText("Welcome, " + firstNameTextView + "!");
     }
 
     private void updateOptionAndStatus() {
-        tvOption.setText(options[currentIndex]);
-        int colorIndex = currentIndex % statusColors.length;
-        int statusResId = getResources().getIdentifier(statusColors[colorIndex], "drawable", getPackageName());
-        if (statusResId != 0) {
+//        tvOption.setText(options[currentIndex]);
+//        int colorIndex = currentIndex % statusColors.length;
+//        int statusResId = getResources().getIdentifier(statusColors[colorIndex], "drawable", getPackageName());
+//        if (statusResId != 0) {
 //            statusCircle.setBackgroundResource(statusResId);
-        }
+//        }
     }
 
     private void startAutoSwitch() {
-        autoSwitchHandler.postDelayed(autoSwitchRunnable, SWITCH_DELAY);
+//        autoSwitchHandler.postDelayed(autoSwitchRunnable, SWITCH_DELAY);
     }
 
     private void stopAutoSwitch() {
-        autoSwitchHandler.removeCallbacks(autoSwitchRunnable);
+
+//        autoSwitchHandler.removeCallbacks(autoSwitchRunnable);
     }
 
     @Override
@@ -224,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        startAutoSwitch();
+//        startAutoSwitch();
 
         // Fetch user profile only if you have a valid token
         SharedPreferences sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
@@ -234,19 +235,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        if (main.isDrawerOpen(GravityCompat.START)) {
-            main.closeDrawer(GravityCompat.START);
-        } else {
-            new AlertDialog.Builder(this)
-                    .setTitle("Exit")
-                    .setMessage("Are you sure you want to exit?")
-                    .setPositiveButton("Yes", (dialog, which) -> finish()) // Close the activity
-                    .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
-                    .show();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (main.isDrawerOpen(GravityCompat.START)) {
+//            main.closeDrawer(GravityCompat.START);
+//        } else {
+//            new AlertDialog.Builder(this)
+//                    .setTitle("Exit")
+//                    .setMessage("Are you sure you want to exit?")
+//                    .setPositiveButton("Yes", (dialog, which) -> finish()) // Close the activity
+//                    .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
+//                    .show();
+//        }
+//    }
 
     private void navigateToEducation() {Intent intent = new Intent(this, EducationActivity.class);
         startActivity(intent);
@@ -314,13 +315,13 @@ public class MainActivity extends AppCompatActivity {
             if (welcomeMessage != null) {
                 String welcomeText = "Welcome " + firstName ;
                 Log.d("MainActivity", welcomeText);
-                welcomeMessage.setText(welcomeText);
+//                welcomeMessage.setText(welcomeText);
             } else {
                 Log.e("MainActivity", "welcomeMessage is null");
             }
 
             // Update the user name in the drawer header
-            populateDrawer(userProfile);
+//            populateDrawer(userProfile);
         } else {
             Log.e("MainActivity", "UserProfile is null");
         }

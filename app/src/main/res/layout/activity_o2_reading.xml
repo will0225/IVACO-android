@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/readingbg"
-
+    android:orientation="vertical"
     tools:context=".ui.measurement_reading.O2_Reading_Activity">
-    <androidx.cardview.widget.CardView
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="#0F336F"
+        android:drawableLeft="@drawable/ic_back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O2"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0F336F"
+            android:layout_margin="18dp"
+            android:layout_marginBottom="0dp"/>
+
+        <androidx.cardview.widget.CardView
         android:id="@+id/card_title"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="18dp"
         app:cardCornerRadius="8dp"
@@ -23,14 +53,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
-
-            <!-- Title for Blood Glucose -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
             <!-- Input for Blood Glucose with units selection -->
             <LinearLayout
@@ -46,22 +68,36 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Enter Title" />
+                    android:hint="Enter Title"
+                    android:background="#00000000"/>
 
                 <!-- Unit Selection -->
-                <Spinner
-                    android:id="@+id/spinner_unit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:entries="@array/spo2_units" />
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_unit"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:entries="@array/spo2_units" />-->
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SPO2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#0F336F"
+        android:layout_margin="18dp"
+        android:layout_marginBottom="0dp"/>
     <androidx.cardview.widget.CardView
         android:id="@+id/card_o2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="18dp"
         app:cardCornerRadius="8dp"
@@ -75,27 +111,27 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <!-- Title for SPO2 -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SPO2"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
             <!-- Input for SPO2 -->
             <EditText
                 android:id="@+id/et_o2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Enter SPO2" />
+                android:hint="Enter SPO2"
+                android:background="#00000000"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
+    </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_margin="18dp">
     <!-- Submit and Cancel Buttons at the Bottom -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
@@ -107,18 +143,19 @@
 
         <Button
             android:id="@+id/btn_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0070FA"
+            android:layout_width="140dp"
+            android:layout_height="65dp"
+            android:backgroundTint="#0F336F"
             android:text="Submit" />
 
         <Button
             android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="65dp"
             android:text="Cancel"
-            android:background="#0070FA"
+            android:backgroundTint="@color/white"
+            android:textColor="#0F336FE0"
             android:layout_marginStart="16dp" />
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </GridLayout>
+</LinearLayout>

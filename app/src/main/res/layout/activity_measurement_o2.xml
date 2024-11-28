@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4FAF9"
+    android:orientation="vertical"
     tools:context=".ui.measurements.Measurement_O2_Activity">
 
-    <!-- Welcome User Text -->
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Welcome, User!"
-        android:textSize="24sp"
-        android:textColor="@android:color/black" />
-
-    <!-- PNG Image below Welcome Text -->
-    <ImageView
-        android:id="@+id/welcome_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/welcome_text"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/o2" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="#0F336F"
+        android:drawableLeft="@drawable/ic_back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O2"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+    </GridLayout>
 
     <!-- WebView for YouTube Video -->
     <WebView
@@ -46,8 +44,10 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="A tutorial for how to add measurements"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        android:gravity="left"
+        android:layout_marginLeft="25dp"
+        android:textColor="#0F336F"
         android:textStyle="bold" />
 
     <!-- Tutorial Description Text -->
@@ -60,10 +60,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:layout_marginLeft="25dp"
         android:text="Watch the well explained tutorial till end and if still it's unclear then contact technical support!"
         android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:gravity="center" />
+        android:textColor="@android:color/black" />
 
     <!-- Button Container at the Bottom -->
     <LinearLayout
@@ -92,16 +93,14 @@
         <!-- Second Button -->
         <Button
             android:id="@+id/button_o2_manually_add"
-            android:layout_width="10dp"
-            android:layout_height="100dp"
+            android:layout_width="7dp"
+            android:layout_height="60dp"
             android:elevation="10dp"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:text="Manually Add"
-            android:drawablePadding="8dp"
-            android:background="#259CFA"
-            android:backgroundTint="#259CFA"
-            android:textColor="@android:color/white" />
+            android:text="Add Manually"
+            android:backgroundTint="#0F336F"
+            android:textColor="@android:color/white"
+            />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

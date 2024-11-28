@@ -9,59 +9,7 @@
     android:background="#F4FAF9">
 
     <!-- Toolbar -->
-    <include layout="@layout/toolbar_layout" />
-
-    <!-- Welcome Text -->
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Welcome!"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="1dp"
-        android:layout_gravity="center_horizontal" />
-
-    <!-- Option Selector Layout with Arrows -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="16dp">
-
-        <!-- Left Arrow (Previous Option) -->
-        <ImageView
-            android:id="@+id/iv_previous"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_back_ios_24"
-            android:contentDescription="Previous option"
-            android:padding="16dp"
-            android:clickable="true"
-            android:focusable="true" />
-
-        <!-- PieChart -->
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/pie_chart"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:padding="0dp"
-            />
-
-        <!-- Right Arrow (Next Option) -->
-        <ImageView
-            android:id="@+id/iv_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_forward_ios_24"
-            android:contentDescription="Next option"
-            android:padding="16dp"
-            android:clickable="true"
-            android:focusable="true" />
-    </LinearLayout>
+<!--    <include layout="@layout/toolbar_layout" />-->
 
 
     <!-- Option Label -->
@@ -81,7 +29,8 @@
         android:alignmentMode="alignMargins"
         android:columnCount="2"
         android:padding="16dp"
-        android:rowOrderPreserved="false">
+        android:rowOrderPreserved="false"
+        android:layout_marginTop="150dp">
 
         <!-- Button: Measurement -->
         <androidx.cardview.widget.CardView
@@ -97,22 +46,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/measurement"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Measurement"
+                    android:text="@string/measurement"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -132,22 +74,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/email"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Messages"
+                    android:text="@string/messages"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -167,22 +102,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/telemed"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TeleMed"
+                    android:text="@string/telemed"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -202,22 +130,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/education"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Education"
+                    android:text="@string/education"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -237,22 +158,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/chat"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chat"
+                    android:text="@string/chat"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -272,22 +186,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#259CFA"
+                android:background="#FFFFFF"
                 android:gravity="center">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/notification"
-                    android:background="@drawable/circular_background"
-                    android:padding="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notifications"
+                    android:text="@string/notifications"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
+                    android:textColor="#0F336F"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
             </LinearLayout>
@@ -295,5 +202,34 @@
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_bottom_menu"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#0F336F"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:src="@drawable/group_bottom"
+                    android:padding="8dp"
+                    android:contentDescription="@string/bottom_home_group"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
 </LinearLayout>

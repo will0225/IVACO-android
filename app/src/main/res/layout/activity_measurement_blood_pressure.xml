@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4FAF9"
+    android:orientation="vertical"
     tools:context=".ui.measurements.Measurement_BloodPressure_Activity">
 
-    <!-- Welcome User Text -->
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Welcome, User!"
-        android:textSize="24sp"
-        android:textColor="@android:color/black" />
+    <View
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:id="@+id/welcome_text" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/welcome_image" />
 
-    <!-- PNG Image below Welcome Text -->
-    <ImageView
-        android:id="@+id/welcome_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/welcome_text"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/blood_pressure" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="#0F336F"
+        android:drawableLeft="@drawable/ic_back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A tutorial for how to add measurements"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+    </GridLayout>
 
     <!-- WebView for YouTube Video -->
     <WebView
@@ -46,7 +52,9 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="A tutorial for how to add measurements"
-        android:textSize="18sp"
+        android:textSize="26sp"
+        android:gravity="left"
+        android:layout_marginLeft="25dp"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
@@ -61,9 +69,10 @@
         android:layout_marginEnd="25dp"
         android:layout_centerHorizontal="true"
         android:text="Watch the well explained tutorial till end and if still it's unclear then contact technical support!"
-        android:textSize="14sp"
+        android:gravity="left"
+        android:layout_marginLeft="25dp"
         android:textColor="@android:color/black"
-        android:gravity="center" />
+        />
 
     <!-- Button Container at the Bottom -->
     <LinearLayout
@@ -75,31 +84,16 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:padding="16dp">
-
-        <!-- First Button -->
-<!--        <Button-->
-<!--            android:id="@+id/button_bp_automatically_add"-->
-<!--            android:layout_width="10dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:layout_marginEnd="5dp"-->
-<!--            android:text="Automatically Add"-->
-<!--            android:background="#0070FA"-->
-<!--            android:textColor="@android:color/white" />-->
-
-        <!-- Second Button -->
         <Button
             android:id="@+id/button_bp_manually_add"
-            android:layout_width="10dp"
-            android:layout_height="100dp"
+            android:layout_width="7dp"
+            android:layout_height="60dp"
             android:elevation="10dp"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:text="Manually Add"
-            android:background="#259CFA"
-            android:backgroundTint="#259CFA"
+            android:text="Add Manually"
+            android:backgroundTint="#0F336F"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

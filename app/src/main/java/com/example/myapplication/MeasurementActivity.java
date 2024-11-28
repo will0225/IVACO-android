@@ -72,46 +72,46 @@ public class MeasurementActivity extends AppCompatActivity {
         }
 
         // Find buttons
-        ImageButton buttonBack = findViewById(R.id.buttonBack);
+//        ImageButton buttonBack = findViewById(R.id.buttonBack);
 
         // Set click listener for the back button
-        buttonBack.setOnClickListener(v -> onBackPressed());
+//        buttonBack.setOnClickListener(v -> onBackPressed());
         // Drawer and navigation setup
-        main = findViewById(R.id.main);
-        buttonDrawer = findViewById(R.id.buttonDrawer);
-        navigationView = findViewById(R.id.navigationView);
-        buttonDrawer.setOnClickListener(view -> main.open());
-        navigationView.setNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.navProfile) {
-                Toast.makeText(MeasurementActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MeasurementActivity.this, ProfileActivity.class);
-                startActivity(intent);
-                finish();
-            }
-            else if (item.getItemId() == R.id.navReports) {
-                Toast.makeText(MeasurementActivity.this, "Reports Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MeasurementActivity.this, ReportActivity.class);
-                startActivity(intent);
-            }
-            else if (item.getItemId() == R.id.navTeleMed) {
-                Toast.makeText(MeasurementActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MeasurementActivity.this, TeleMedActivity.class);
-                startActivity(intent);
-            }
-            else if (item.getItemId() == R.id.navDevice) {
-                Toast.makeText(MeasurementActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MeasurementActivity.this, Device_Activity.class);
-                startActivity(intent);
-            }
-            else if (item.getItemId() == R.id.navLogout) {
-                // Handle logout logic here
-                Toast.makeText(MeasurementActivity.this, "Logging Out", Toast.LENGTH_SHORT).show();
-                logout();
-            }
-            // Close the drawer after an item is clicked
-            main.closeDrawer(GravityCompat.START);
-            return true; // Return true to indicate the event was handled
-        });
+//        main = findViewById(R.id.main);
+//        buttonDrawer = findViewById(R.id.buttonDrawer);
+//        navigationView = findViewById(R.id.navigationView);
+//        buttonDrawer.setOnClickListener(view -> main.open());
+//        navigationView.setNavigationItemSelectedListener(item -> {
+//            if (item.getItemId() == R.id.navProfile) {
+//                Toast.makeText(MeasurementActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MeasurementActivity.this, ProfileActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//            else if (item.getItemId() == R.id.navReports) {
+//                Toast.makeText(MeasurementActivity.this, "Reports Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MeasurementActivity.this, ReportActivity.class);
+//                startActivity(intent);
+//            }
+//            else if (item.getItemId() == R.id.navTeleMed) {
+//                Toast.makeText(MeasurementActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MeasurementActivity.this, TeleMedActivity.class);
+//                startActivity(intent);
+//            }
+//            else if (item.getItemId() == R.id.navDevice) {
+//                Toast.makeText(MeasurementActivity.this, "TeleMedicine Menu Clicked", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(MeasurementActivity.this, Device_Activity.class);
+//                startActivity(intent);
+//            }
+//            else if (item.getItemId() == R.id.navLogout) {
+//                // Handle logout logic here
+//                Toast.makeText(MeasurementActivity.this, "Logging Out", Toast.LENGTH_SHORT).show();
+//                logout();
+//            }
+//            // Close the drawer after an item is clicked
+//            main.closeDrawer(GravityCompat.START);
+//            return true; // Return true to indicate the event was handled
+//        });
 
 
         // Initialize CardViews

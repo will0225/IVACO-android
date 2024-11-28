@@ -63,10 +63,10 @@ public class AddAppointment_Activity extends AppCompatActivity {
         btnCancel = findViewById(R.id.btn_cancel);
         etAppointmentTitle = findViewById(R.id.et_appointment_title);
         etAppointmentDescription = findViewById(R.id.et_appointment_description);
-        spinnerAppointmentType = findViewById(R.id.spinner_appointment_type);
-        spinnerAppointmentAbout = findViewById(R.id.spinner_appointment_about);
-        searchView = findViewById(R.id.searchView);
-        recyclerView = findViewById(R.id.resultsRecyclerView);
+//        spinnerAppointmentType = findViewById(R.id.spinner_appointment_type);
+//        spinnerAppointmentAbout = findViewById(R.id.spinner_appointment_about);
+//        searchView = findViewById(R.id.searchView);
+//        recyclerView = findViewById(R.id.resultsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize the adapter with an empty list
@@ -76,19 +76,19 @@ public class AddAppointment_Activity extends AppCompatActivity {
         // Set up search functionality
         setupSearch();
 
-        TextView tvAppointmentDate = findViewById(R.id.tv_appointment_date);
-        tvAppointmentDate.setOnClickListener(v -> {
-            Calendar calendar = Calendar.getInstance();
-            int year = calendar.get(Calendar.YEAR);
-            int month = calendar.get(Calendar.MONTH);
-            int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-            DatePickerDialog datePickerDialog = new DatePickerDialog(AddAppointment_Activity.this,
-                    (view, year1, month1, dayOfMonth) -> {
-                        tvAppointmentDate.setText(dayOfMonth + "/" + (month1 + 1) + "/" + year1);
-                    }, year, month, day);
-            datePickerDialog.show();
-        });
+//        TextView tvAppointmentDate = findViewById(R.id.tv_appointment_date);
+//        tvAppointmentDate.setOnClickListener(v -> {
+//            Calendar calendar = Calendar.getInstance();
+//            int year = calendar.get(Calendar.YEAR);
+//            int month = calendar.get(Calendar.MONTH);
+//            int day = calendar.get(Calendar.DAY_OF_MONTH);
+//
+//            DatePickerDialog datePickerDialog = new DatePickerDialog(AddAppointment_Activity.this,
+//                    (view, year1, month1, dayOfMonth) -> {
+//                        tvAppointmentDate.setText(dayOfMonth + "/" + (month1 + 1) + "/" + year1);
+//                    }, year, month, day);
+//            datePickerDialog.show();
+//        });
 
         btnSubmit.setOnClickListener(v -> handleSubmit());
         btnCancel.setOnClickListener(v -> handleCancel());

@@ -26,11 +26,16 @@
             android:drawableLeft="@drawable/ic_back"/>
 
     </RelativeLayout>
-    <RelativeLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:orientation="vertical"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,23 +44,49 @@
             android:textFontWeight="700"
             android:textSize="15dp"
             android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
             />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/list_mark"/>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
             android:text="Please read the following terms of service agreement carefully. By accessing or using our sites and our services, you hereby agree to be  bound by the terms and all terms incorporated herein by reference. It is the responsibility of you, the user, customer, or prospective customer to read the terms and conditions before proceeding to use this site. If you do not expressly agree to all of the terms and conditions, then please do not access or use our sites or our services. This terms of service agreement is effective as of 08/15/2017." />
-
-    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acceptance Of Terms"
+            android:textColor="#0F336F"
+            android:textFontWeight="700"
+            android:textSize="15dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please read the following terms of service agreement carefully. By accessing or using our sites and our services, you hereby agree to be  bound by the terms and all terms incorporated herein by reference. It is the responsibility of you, the user, customer, or prospective customer to read the terms and conditions before proceeding to use this site. If you do not expressly agree to all of the terms and conditions, then please do not access or use our sites or our services. This terms of service agreement is effective as of 08/15/2017."
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION OF WEBSITE SERVICES OFFERED"
+            android:textColor="#0F336F"
+            android:textFontWeight="700"
+            android:textSize="15dp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The site provides information and services related to telemedicine and patient monitoring and wellness. Any and all visitors to our site shall be deemed as 'Users' Of the herein contained services provided for the purpose of this TOS."
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The user acknowledges and agrees that the services provided and made available through our website and applications, which may include some mobile applications, are the sole property of ETSP. At its discretion, ETSP may offer additional website services and/or products, or update, modify or revise any current content and services, and this agreement shall apply to any and all additional services and/or products and any and all updated, modified or revised services unless otherwise stipulated. ETSP does hereby reserve the right to cancel and cease offering any of the aforementioned services and/or products. You, as the end user acknowledge, accept and agree that ETSP shall not be held liable for any such updates, modifications, revisions, suspensions or discontinuance of any of our services and/or products. Your continued use of the services provided, after such posting of any updates, changes, and/or modifications shall constitute your acceptance of such updates."
+            />
+    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

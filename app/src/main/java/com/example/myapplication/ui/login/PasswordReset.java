@@ -37,10 +37,10 @@ public class PasswordReset extends AppCompatActivity {
 
         // Initialize views
         etUsername = findViewById(R.id.et_username);
-        btnSubmit = findViewById(R.id.btn_submit);
-        btnCancel = findViewById(R.id.btn_cancel);
-        privacyPolicyTextView = findViewById(R.id.tv_privacy_policy);
-        termsConditionsTextView = findViewById(R.id.tv_terms_conditions);
+//        btnSubmit = findViewById(R.id.btn_submit);
+//        btnCancel = findViewById(R.id.btn_cancel);
+//        privacyPolicyTextView = findViewById(R.id.tv_privacy_policy);
+//        termsConditionsTextView = findViewById(R.id.tv_terms_conditions);
 
         // Set OnClickListeners for text views and buttons
         setOnClickListeners();
@@ -55,10 +55,10 @@ public class PasswordReset extends AppCompatActivity {
 
     // Set OnClickListeners for buttons and text views
     private void setOnClickListeners() {
-        btnSubmit.setOnClickListener(v -> submitForm());
-        btnCancel.setOnClickListener(v -> navigateBackToLogin());
-        privacyPolicyTextView.setOnClickListener(v -> startActivity(new Intent(this, PrivacyPolicy.class)));
-        termsConditionsTextView.setOnClickListener(v -> startActivity(new Intent(this, TermsConditions.class)));
+//        btnSubmit.setOnClickListener(v -> submitForm());
+//        btnCancel.setOnClickListener(v -> navigateBackToLogin());
+//        privacyPolicyTextView.setOnClickListener(v -> startActivity(new Intent(this, PrivacyPolicy.class)));
+//        termsConditionsTextView.setOnClickListener(v -> startActivity(new Intent(this, TermsConditions.class)));
     }
 
     // Handle form submission and password reset request
